@@ -1,6 +1,6 @@
 import { Component} from '@angular/core';
 import { User } from '../../app/models/user.class';
-
+import { provideNativeDateAdapter } from '@angular/material/core';
 
 @Component({
   selector: 'app-dialog-add-user',
@@ -20,9 +20,9 @@ export class DialogAddUserComponent {
       this.user.birthDate = this.birthDate.getTime();
       console.log('Current user is', this.user);
 
-      this.firestore.collection('users').add(this.user.toJSON()).then((result: any) => {
+/*       this.firestore.collection('users').add(this.user.toJSON()).then((result: any) => {
         console.log('Adding user finished', result);
-      });
+      }); */
     }
   }
 
