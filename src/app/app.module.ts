@@ -22,6 +22,8 @@ import { FormsModule } from '@angular/forms';
 import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
 import { getFirestore, provideFirestore } from '@angular/fire/firestore';
 
+import { provideHttpClient, withFetch } from '@angular/common/http';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -47,7 +49,8 @@ import { getFirestore, provideFirestore } from '@angular/fire/firestore';
   providers: [
     provideClientHydration(),
     provideAnimationsAsync(),
-    provideNativeDateAdapter()
+    provideNativeDateAdapter(),
+    provideHttpClient(withFetch())
   ],
   bootstrap: [AppComponent]
 })
