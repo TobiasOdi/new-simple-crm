@@ -1,0 +1,54 @@
+* {
+    box-sizing: border-box;
+}
+
+.mat-drawer-container {
+    height: 100vh;
+}
+
+mat-toolbar, mat-toolbar-row {
+    min-height: 56px;
+    height: 56px;
+}
+
+.menuIcon {
+    cursor: pointer;
+}
+
+.sidenav{
+    width: 300px;
+}
+
+.logoContainer {
+    height: 56px;
+    min-height: 56px;
+    border-bottom: 1px solid rgba(0,0,0,0.5);
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.menuItems {
+    list-style-type: none;
+    padding-left: 0;
+
+    > li {
+        padding-left: 16px;
+        padding-right: 16px;
+        height: 50px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 0.5rem;
+        cursor: pointer;
+
+        &:hover {
+            background-color: rgba(0,0,0,0.1);
+        }
+    }
+}
+
+.routerContainer {
+    padding-left: 3rem;
+    padding-top: 1rem;
+}
