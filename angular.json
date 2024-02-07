@@ -75,10 +75,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "simpleCRMNew:build:production"
+              "buildTarget": "simplecrmnew:build:production"
             },
             "development": {
-              "buildTarget": "simpleCRMNew:build:development"
+              "buildTarget": "simplecrmnew:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -86,7 +86,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "buildTarget": "simpleCRMNew:build"
+            "buildTarget": "simplecrmnew:build"
           }
         },
         "test": {
