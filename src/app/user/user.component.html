@@ -3,22 +3,20 @@
         <mat-card-content>
             <table class="userTable">
                 <tr>
-                    <th>First Name</th>
-                    <th>Last Name</th>
+                    <th>Name</th>
+                    <th>E-Mail</th>
+                    <th>Brithdate</th>
                     <th>Address</th>
                     <th>ZIP Code</th>
+                    <th>City</th>
                 </tr>
-                <tr>
-                    <td>asdf</td>
-                    <td>sadf</td>
-                    <td>asdf</td>
-                    <td>asdfsdaf</td>
-                </tr>
-                <tr>
-                    <td>asdf</td>
-                    <td>sadf</td>
-                    <td>asdf</td>
-                    <td>asdfsdaf</td>
+                <tr *ngFor="let user of allUsers">
+                    <td>{{ user.firstName }} {{ user.lastName }}</td>
+                    <td>{{ user.email }}</td>
+                    <td>{{ user.birthDate }}</td>
+                    <td>{{ user.address }}</td>
+                    <td>{{ user.zipCode }}</td>
+                    <td>{{ user.city }}</td>
                 </tr>
             </table>
         </mat-card-content>

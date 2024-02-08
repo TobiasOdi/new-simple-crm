@@ -24,8 +24,10 @@ export class DialogAddUserComponent {
     if (this.birthDate != undefined) {
       this.loading = true;
       this.user.birthDate = this.birthDate.getTime();
+      //let userId = Math.floor(Math.random() * 1000000).toString();
+      //this.user.id = userId;
       console.log('Current user is', this.user);
-      await addDoc(this.usersCollection, this.user.toJSON());
+      await addDoc(this.usersCollection, this.getCleanJSON(this.user));
       this.loading = false;
       this.dialogRef.close();
     }
@@ -35,4 +37,18 @@ export class DialogAddUserComponent {
     this.dialogRef.close();
   }
 
+  getCleanJSON(user: User) {
+    return {
+      //  'id': user.id,
+        'firstName': user.firstName,
+        'lastName': user.lastName,
+        'email': user.email,
+        'birthDate': user.birthDate,
+        'address': user.address,
+        'zipCode': user.zipCode,
+        'city': user.city
+    }
+  }
 }
+
+
