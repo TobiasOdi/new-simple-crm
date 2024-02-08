@@ -19,6 +19,9 @@ import { MatInputModule} from '@angular/material/input';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { provideNativeDateAdapter } from '@angular/material/core';
 import { FormsModule } from '@angular/forms';
+import {MatProgressBarModule} from '@angular/material/progress-bar';
+import {MatCardModule} from '@angular/material/card';
+
 import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
 import { getFirestore, provideFirestore } from '@angular/fire/firestore';
 
@@ -44,7 +47,9 @@ import { provideHttpClient, withFetch } from '@angular/common/http';
     MatDatepickerModule,
     FormsModule,
     provideFirebaseApp(() => initializeApp({"projectId":"simple-crm-604df","appId":"1:688396289569:web:8c93ced180f7afcbe2c560","storageBucket":"simple-crm-604df.appspot.com","apiKey":"AIzaSyBlkq-AEaCEuW-CqeMLTk0QyB_9e204cWQ","authDomain":"simple-crm-604df.firebaseapp.com","messagingSenderId":"688396289569"})),
-    provideFirestore(() => getFirestore())
+    provideFirestore(() => getFirestore()),
+    MatProgressBarModule,
+    MatCardModule
   ],
   providers: [
     provideClientHydration(),
