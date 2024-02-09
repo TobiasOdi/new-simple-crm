@@ -4,11 +4,11 @@
             <mat-icon>more_vert</mat-icon>
         </button>
         <mat-menu #userMenu="matMenu">
-            <button (click)="editMenu()" mat-menu-item>Edit</button>
+            <button (click)="editUserDetails()" mat-menu-item>Edit</button>
         </mat-menu>
     </div>
     <div>
-        <img src="../../assets/img/free_icon_1 (4).svg">
+        <img src="../../assets/img/profile white.svg">
         <div>
             <h2>{{ user.firstName }} {{ user.lastName }}</h2>
             <div>{{ user.email }}</div>
@@ -23,7 +23,7 @@
             <mat-icon>more_vert</mat-icon>
         </button>
         <mat-menu #addressMenu="matMenu">
-            <button (click)="editMenu()" mat-menu-item>Edit</button>
+            <button (click)="editUserAddress()" mat-menu-item>Edit</button>
         </mat-menu>
     </div>
     <mat-card-content>
