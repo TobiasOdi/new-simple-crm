@@ -1,5 +1,5 @@
 export class User {
-    //id: string;
+    id: string;
     firstName: string;
     lastName: string;
     email: string;
@@ -9,7 +9,7 @@ export class User {
     city: string;
 
     constructor(obj?: any) { // Zuweiseung der Werte des hineingegebenen Objektes zu den Feldern der Klasse.
-        //this.id = obj ? obj.id : "";
+        this.id = obj ? obj.id : "";
         this.firstName = obj ? obj.firstName : ""; // if else Abfrage schneller geschrieben. Wenn das Objekt existiert, dann obj.firstname und sonst ein leerer String.
         this.lastName = obj ? obj.lastName : "";
         this.email = obj ? obj.email : "";

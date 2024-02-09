@@ -26,7 +26,6 @@ export class DialogAddUserComponent {
       this.user.birthDate = this.birthDate.getTime();
       //let userId = Math.floor(Math.random() * 1000000).toString();
       //this.user.id = userId;
-      console.log('Current user is', this.user);
       await addDoc(this.usersCollection, this.getCleanJSON(this.user));
       this.loading = false;
       this.dialogRef.close();
@@ -39,7 +38,7 @@ export class DialogAddUserComponent {
 
   getCleanJSON(user: User) {
     return {
-      //  'id': user.id,
+        'id': user.id,
         'firstName': user.firstName,
         'lastName': user.lastName,
         'email': user.email,

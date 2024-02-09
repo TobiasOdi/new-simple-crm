@@ -1,0 +1,63 @@
+.userDetailHeader {
+    min-height: 250px;
+    background-color: white;
+
+    padding: 1rem;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 1rem;
+
+    img {
+        height: 120px;
+        width: 120px;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+
+    > div {
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;  
+    }
+}
+
+.userDetailHeader > div:first-of-type {
+    justify-content: flex-end;
+
+    > button {
+        color: #424242;
+    }
+
+}
+
+.userDetailHeader > div:last-of-type {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
+
+    h2, div {
+        color: black;
+    }
+}
+
+
+
+.userEditContainer {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.titleContaienr {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    padding-bottom: 0;
+}
+
+/* .title {
+    padding: 1rem 1rem 0 1rem;
+} */

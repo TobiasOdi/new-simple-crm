@@ -21,18 +21,25 @@ import { provideNativeDateAdapter } from '@angular/material/core';
 import { FormsModule } from '@angular/forms';
 import {MatProgressBarModule} from '@angular/material/progress-bar';
 import {MatCardModule} from '@angular/material/card';
+import {MatMenuModule} from '@angular/material/menu';
+
 
 import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
 import { getFirestore, provideFirestore } from '@angular/fire/firestore';
 
 import { provideHttpClient, withFetch } from '@angular/common/http';
-
+import { UserDetailComponent } from './user-detail/user-detail.component';
+import { DialogEditAddressComponent } from './dialog-edit-address/dialog-edit-address.component';
+import { DialogEditUserComponent } from './dialog-edit-user/dialog-edit-user.component';
 @NgModule({
   declarations: [
     AppComponent,
     UserComponent,
     DashboardComponent,
     DialogAddUserComponent,
+    UserDetailComponent,
+    DialogEditAddressComponent,
+    DialogEditUserComponent,
   ],
   imports: [
     BrowserModule,
@@ -49,7 +56,8 @@ import { provideHttpClient, withFetch } from '@angular/common/http';
     provideFirebaseApp(() => initializeApp({"projectId":"simple-crm-604df","appId":"1:688396289569:web:8c93ced180f7afcbe2c560","storageBucket":"simple-crm-604df.appspot.com","apiKey":"AIzaSyBlkq-AEaCEuW-CqeMLTk0QyB_9e204cWQ","authDomain":"simple-crm-604df.firebaseapp.com","messagingSenderId":"688396289569"})),
     provideFirestore(() => getFirestore()),
     MatProgressBarModule,
-    MatCardModule
+    MatCardModule,
+    MatMenuModule
   ],
   providers: [
     provideClientHydration(),
